@@ -1,5 +1,9 @@
 FROM mariadb:10.6.4-focal
+# FROM ubuntu:20.04
 
-COPY ./mariadb/my.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
+# RUN apt-get update
+# RUN apt-get install -y mariadb-server
+
+COPY ./mariadb/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 
 CMD ["mysqld"]
