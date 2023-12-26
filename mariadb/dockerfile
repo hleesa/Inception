@@ -6,4 +6,8 @@ FROM mariadb:10.6.4-focal
 
 COPY ./mariadb/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 
+# COPY ./mariadb/init.sh /usr/local/bin/
+
+# ENTRYPOINT ["init.sh"]
+
 CMD ["mysqld"]
