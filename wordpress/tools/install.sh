@@ -16,20 +16,12 @@ else
     wp core download --allow-root 
     
     sleep 5
-    wp config create --dbname=$BDD_NAME --dbuser=$BDD_USER --dbpass=$BDD_USER_PASSWORD --dbhost=$BDD_HOST --allow-root 
+    wp config create --dbname=$WORDPRESS_DB_NAME --dbuser=$WORDPRESS_DB_USER --dbpass=$WORDPRESS_DB_PASSWORD --dbhost=$WORDPRESS_DB_HOST --allow-root 
     sleep 5
 
-    wp core install --url=tliot.42.fr --title=INCEPTION --admin_user=$WP_ADMIN_USER --admin_password=$WP_ADMIN_PASSWORD --admin_email=$WP_ADMIN_EMAIL --allow-root  
-    wp user create $WP_USER $WP_USER_EMAIL --user_pass=$WP_USER_PASSWORD --role=$WP_USER_ROLE --porcelain --allow-root 
+    wp core install --url=tliot.42.fr --title=INCEPTION --admin_user=$WORDPRESS_DB_USER --admin_password=$WORDPRESS_DB_PASSWORD --admin_email=aa --allow-root  
+    wp user create $WORDPRESS_DB_USER aa --user_pass=$WORDPRESS_DB_PASSWORD --role=$WP_USER_ROLE --porcelain --allow-root 
     wp theme install neve --activate --allow-root  
     
-    wp config set WP_REDIS_HOST redis --add --allow-root
-    wp config set WP_REDIS_PORT 6379 --add --allow-root  
-    wp config set WP_CACHE true --add --allow-root  
-    wp plugin install redis-cache --activate --allow-root  
-    wp plugin update --all --allow-root  
-    wp redis enable --allow-root  
     echo "END" 
 fi
-
-/usr/sbin/php-fpm7.3 -F
