@@ -9,6 +9,8 @@ services:
       - db_data:/var/lib/mysql
     env_file:
       - ./env/mariadb.env
+    networks:
+      - mynetwork
 
   wordpress:
     # image: wordpress:latest
@@ -22,6 +24,8 @@ services:
       - ./env/wordpress.env
     depends_on:
       - db
+    networks:
+      - mynetwork
 
   nginx:
     build: 
@@ -33,6 +37,13 @@ services:
       - 80:80
     depends_on: 
       - wordpress
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    name : mynetwork
+    driver : bridge
 
 volumes:
   db_data:

@@ -1,0 +1,257 @@
+[
+    {
+        "Id": "d09c2f42a43e1586b62703e208dbe2fa51ea31d26b6c1dc648e849b598083928",
+        "Created": "2023-12-29T09:06:55.082093577Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "apache2-foreground"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 99020,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-12-29T09:06:55.702140478Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:9071407ed1c0ef5519f4b8fe8bd7d2c3ba6a5ea5e4970bf6e77d770ff624d3b9",
+        "ResolvConfPath": "/var/lib/docker/containers/d09c2f42a43e1586b62703e208dbe2fa51ea31d26b6c1dc648e849b598083928/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/d09c2f42a43e1586b62703e208dbe2fa51ea31d26b6c1dc648e849b598083928/hostname",
+        "HostsPath": "/var/lib/docker/containers/d09c2f42a43e1586b62703e208dbe2fa51ea31d26b6c1dc648e849b598083928/hosts",
+        "LogPath": "/var/lib/docker/containers/d09c2f42a43e1586b62703e208dbe2fa51ea31d26b6c1dc648e849b598083928/d09c2f42a43e1586b62703e208dbe2fa51ea31d26b6c1dc648e849b598083928-json.log",
+        "Name": "/inception-wordpress-1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "inception_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "inception_wp_data",
+                    "Target": "/var/www/html",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/43fa61e6cb47b10b9a2e8b91f50189dc55c36b075e0f95a40bcde0d92ca707b2-init/diff:/var/lib/docker/overlay2/f877039bdb378d25e75090ab593f3ec2e13d0201170f574ebb2cf53993a6ee69/diff:/var/lib/docker/overlay2/2b9a2cdcabde7cf9b2aaf4a7919865ff53f2590412c13b95b5edd0c55e99c12f/diff:/var/lib/docker/overlay2/85f980e6801aab5e3cf8b2ffb2a68a88833af08dc621241db52b690b0e288157/diff:/var/lib/docker/overlay2/d8db7ed412e2c4cf3bfa215f2d0bbfce0292914a01256a3e874d694f3178fbcc/diff:/var/lib/docker/overlay2/a95e9f8ccf9187d26f02bbbbf01820aa603672867673544ca8b4d16a1ad27b9e/diff:/var/lib/docker/overlay2/975271cac108c1c74597e4be8381377015c51fcb46ffd0515747f03d32ec34e4/diff:/var/lib/docker/overlay2/574d2b5d1d90a412440d1f96cc77a025dedf9cd40937bec6946b51ad172b3af8/diff:/var/lib/docker/overlay2/79b44b44e0094243afdd3e972a7e4481043dba462d973f9754c346a0305aaf6a/diff:/var/lib/docker/overlay2/e58082f9f1cd28b414fadc682c82329395679ea369c8aa1bab69bc8a3e2c08ae/diff:/var/lib/docker/overlay2/fab981981e6a4a457763cbe30e589f6f1de10056372d64183082a409dfa9bf08/diff:/var/lib/docker/overlay2/9febd716cf23628b9ab57b75aaaea1867ce6a6f743b7e79606e72d29cf84c33d/diff:/var/lib/docker/overlay2/aa239d5176d510fafa8a2521191e1ceafd8c6ee615ede6b65d423cb6dbdc7af5/diff:/var/lib/docker/overlay2/a511da445445bd9bf4136071ec6183260fa91715edacc30598853365ff41d034/diff:/var/lib/docker/overlay2/51fb37a9698b1e0c2440e9ae0e5b602761a8969348f0f36b2e261f81ea94b945/diff:/var/lib/docker/overlay2/c277412023d6c4620f1796faa342006679dc0a649e7ae6996f10bb5e77212035/diff:/var/lib/docker/overlay2/893864ca9b4edd779e16d647a8f0171937fa449ca7a430500578214f298a5c72/diff:/var/lib/docker/overlay2/de28c4bb8f23abef3b797bb1af0bab9188885ffe7d221b5a81cd0e9d28550f93/diff:/var/lib/docker/overlay2/ea306533dfd3b6f9a8f9f46ec87eda71c29a7ba14a856810a44f2c9197ac44aa/diff:/var/lib/docker/overlay2/eb31d674f9dd5291ed037a954370e9070d3f9f3d606ee6d1f1784e2f427f2e89/diff:/var/lib/docker/overlay2/0f45ef45ef7eef510ebc886a70ff86063583e5a8aacbaadd94996060f919b001/diff:/var/lib/docker/overlay2/fd0b4750c10408c24fc60b166d4d095833d28a984731a36b782ecdad9695a3ef/diff",
+                "MergedDir": "/var/lib/docker/overlay2/43fa61e6cb47b10b9a2e8b91f50189dc55c36b075e0f95a40bcde0d92ca707b2/merged",
+                "UpperDir": "/var/lib/docker/overlay2/43fa61e6cb47b10b9a2e8b91f50189dc55c36b075e0f95a40bcde0d92ca707b2/diff",
+                "WorkDir": "/var/lib/docker/overlay2/43fa61e6cb47b10b9a2e8b91f50189dc55c36b075e0f95a40bcde0d92ca707b2/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "inception_wp_data",
+                "Source": "/var/lib/docker/volumes/inception_wp_data/_data",
+                "Destination": "/var/www/html",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "d09c2f42a43e",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "WORDPRESS_DB_PASSWORD=wordpress",
+                "WORDPRESS_DB_NAME=wordpress",
+                "WORDPRESS_DB_HOST=db",
+                "WORDPRESS_DB_USER=wordpress",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "PHPIZE_DEPS=autoconf \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkg-config \t\tre2c",
+                "PHP_INI_DIR=/usr/local/etc/php",
+                "APACHE_CONFDIR=/etc/apache2",
+                "APACHE_ENVVARS=/etc/apache2/envvars",
+                "PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64",
+                "PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64",
+                "PHP_LDFLAGS=-Wl,-O1 -pie",
+                "GPG_KEYS=39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC",
+                "PHP_VERSION=8.2.14",
+                "PHP_URL=https://www.php.net/distributions/php-8.2.14.tar.xz",
+                "PHP_ASC_URL=https://www.php.net/distributions/php-8.2.14.tar.xz.asc",
+                "PHP_SHA256=763ecd39fcf51c3815af6ef6e43fa9aa0d0bd8e5a615009e5f4780c92705f583"
+            ],
+            "Cmd": [
+                "apache2-foreground"
+            ],
+            "Image": "wordpress:latest",
+            "Volumes": {
+                "/var/www/html": {}
+            },
+            "WorkingDir": "/var/www/html",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "6cf6d2bbd2723fe4b5d397c4b2b2d21bbef2b986e587a7477d8bbbd2aee7849b",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "db:service_started",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "inception",
+                "com.docker.compose.project.config_files": "/Users/salee2/inception/docker-compose.yaml",
+                "com.docker.compose.project.working_dir": "/Users/salee2/inception",
+                "com.docker.compose.service": "wordpress",
+                "com.docker.compose.version": "2.6.1"
+            },
+            "StopSignal": "SIGWINCH"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "27d18afffd54f20e074c95c5020351d029fbac1f46d3dcc44e8edcd67008bdbc",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/27d18afffd54",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "inception_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "inception-wordpress-1",
+                        "wordpress",
+                        "d09c2f42a43e"
+                    ],
+                    "NetworkID": "d6bc3d8a8ee6b7593319b930b3dba74b0faf04952bde79945530c399c6c24a13",
+                    "EndpointID": "d4225bc664dd580dc3f935cc7cef89a6f21e22a988e5fb1c4cab94839eb6c5e4",
+                    "Gateway": "192.168.32.1",
+                    "IPAddress": "192.168.32.3",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:c0:a8:20:03",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

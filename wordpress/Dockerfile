@@ -27,7 +27,7 @@ RUN chmod +x /create_wordpress.sh
 
 ENTRYPOINT ["/create_wordpress.sh" ]
 
-WORKDIR /var/www/html/
+# WORKDIR /var/www/html/
 
 EXPOSE 9000
 
