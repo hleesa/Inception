@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-RUN apt-get -y update && apt-get install -y nginx
+RUN apt-get update -y && apt-get upgrade -y && apt-get install -y nginx 
 
 COPY ./nginx/conf/default /etc/nginx/sites-available/default
 
