@@ -18,11 +18,11 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
   && chmod +x wp-cli.phar \
   && mv wp-cli.phar /usr/local/bin/wp
 
-COPY ./wordpress/conf/www.conf /etc/php/8.2/fpm/pool.d/
+COPY ./conf/www.conf /etc/php/8.2/fpm/pool.d/
 
-COPY ./wordpress/conf/index.php /var/www/html/wordpress/index.php
+COPY ./conf/index.php /var/www/html/wordpress/index.php
 
-COPY ./wordpress/tools/create_wordpress.sh /
+COPY ./tools/create_wordpress.sh /
 
 RUN chmod +x /create_wordpress.sh
 

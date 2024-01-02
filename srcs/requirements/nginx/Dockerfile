@@ -18,9 +18,9 @@ RUN echo "ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;\nssl_certificate_
 
 RUN openssl dhparam -out /etc/nginx/dhparam.pem 2048
 
-COPY ./nginx/conf/ssl-params.conf /etc/nginx/snippets/
+COPY ./conf/ssl-params.conf /etc/nginx/snippets/
 
 
-COPY ./nginx/conf/default /etc/nginx/sites-available/default
+COPY ./conf/default /etc/nginx/sites-available/default
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
