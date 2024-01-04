@@ -23,4 +23,6 @@ COPY ./conf/ssl-params.conf /etc/nginx/snippets/
 
 COPY ./conf/default /etc/nginx/sites-available/default
 
+EXPOSE 443
+
 ENTRYPOINT ["nginx", "-g", "daemon off;"]

@@ -8,6 +8,8 @@ COPY ./tools/docker-entrypoint.sh /
 
 RUN chmod +x /docker-entrypoint.sh
 
+EXPOSE 3306
+
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
 # CMD ["/sbin/mysqld"]
