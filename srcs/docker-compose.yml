@@ -46,7 +46,17 @@ services:
 
 volumes:
   db_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: "/home/salee2/data/mariadb"
   wp_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: "/home/salee2/data/wordpress"
 
 networks:
   my_network:
