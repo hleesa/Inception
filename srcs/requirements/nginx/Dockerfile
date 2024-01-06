@@ -1,7 +1,6 @@
 FROM debian:bookworm
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get install -y nginx 
-
+RUN apt-get update -y && apt-get upgrade -y && apt-get install -y nginx tini 
 
 RUN apt-get install -y nginx openssl
 
@@ -25,4 +24,6 @@ COPY ./conf/default /etc/nginx/sites-available/default
 
 EXPOSE 443
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["/usr/bin/tini", "--"]
+
+CMD ["nginx", "-g", "daemon off;"]

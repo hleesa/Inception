@@ -12,6 +12,7 @@ php-mysql \
 php-mbstring \
 php-xml \
 sendmail \
+tini \
 vim
 
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
@@ -20,13 +21,11 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 
 COPY ./conf/www.conf /etc/php/8.2/fpm/pool.d/
 
-# COPY ./conf/index.php /var/www/html/wordpress/index.php
-
 COPY ./tools/create_wordpress.sh /
 
 RUN chmod +x /create_wordpress.sh
 
-ENTRYPOINT ["/create_wordpress.sh" ]
+ENTRYPOINT ["/usr/bin/tini", "--", "/create_wordpress.sh" ]
 
 WORKDIR /var/www/html/
 
