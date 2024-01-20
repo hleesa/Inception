@@ -11,9 +11,3 @@ RUN chmod +x /docker-entrypoint.sh
 EXPOSE 3306
 
 CMD ["/usr/bin/tini", "--", "/docker-entrypoint.sh"]
-
-# CMD ["/usr/bin/tini", "--"]
-
-# ENTRYPOINT [ "/docker-entrypoint.sh" ]
-
-# CMD ["/sbin/mysqld"]
