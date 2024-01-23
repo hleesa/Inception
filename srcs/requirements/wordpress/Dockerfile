@@ -3,7 +3,7 @@ FROM debian:bullseye
 RUN apt-get update -y && \
 apt-get upgrade -y && \
 apt-get install -y \
-php8.2 \
+php7.3 \
 php-fpm \
 php-cli \
 wget \
@@ -19,7 +19,7 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
   && chmod +x wp-cli.phar \
   && mv wp-cli.phar /usr/local/bin/wp
 
-COPY ./conf/www.conf /etc/php/8.2/fpm/pool.d/
+COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d/
 
 COPY ./tools/create_wordpress.sh /
 
