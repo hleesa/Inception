@@ -21,11 +21,11 @@ services:
       dockerfile: Dockerfile
     volumes:
       - wp_data:/var/www/html
+    env_file:
+      - ./.env
     networks:
       - my_network
     restart: always
-    env_file:
-      - ./.env
 
   nginx:
     container_name: nginx

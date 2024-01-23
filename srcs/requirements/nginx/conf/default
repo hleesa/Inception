@@ -1,10 +1,17 @@
 server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name salee2.42.fr;
+    return 301 https://salee2.42.fr$request_uri;
+}
+
+server {
         listen 443 ssl default_server;      
         listen [::]:443 ssl default_server; 
         
        	ssl_protocols TLSv1.2 TLSv1.3;
 
-        server_name localhost;
+        server_name salee2.42.fr;
 
         # ssl 
         include snippets/self-signed.conf; 
