@@ -21,6 +21,8 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 
 COPY ./conf/www.conf /etc/php/7.4/fpm/pool.d/
 
+RUN mkdir /run/php
+
 COPY ./tools/create_wordpress.sh /
 
 RUN chmod +x /create_wordpress.sh
