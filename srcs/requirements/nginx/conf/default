@@ -12,7 +12,7 @@ server {
         
        	ssl_protocols TLSv1.2 TLSv1.3;
 
-        server_name localhost;
+        server_name salee2.42.fr;
 
         # ssl 
         include snippets/self-signed.conf; 
